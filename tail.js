@@ -7,7 +7,7 @@ const assertEqual = function (actual, expected) {
   } else {
     return `🛑Assertion Failed: ${actual} !== ${expected}`;
   }
-}
+};
 
 
 // function tail(array) {
