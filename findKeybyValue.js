@@ -11,28 +11,32 @@ const assertEqual = function (actual, expected) {
 
 };
 
-const someObject = {
+const somePotato = {
   name: "🥔",
   type: "Yukon Gold",
 };
 
 //FUNCTION
 //INPUT: a value (string) for which we want to find the associated key
-const findKeybyValue = function (inputValue) {
+const findKeyByValue = function (someObject, inputValue) {
   // HOW?
   // loop over all the values in the object (for in?)
+  // need to make values into an array
   // if the value is NOT the inputvalue, skip.
-  const key = 0;
-  for (key in someObject) {
+  let inputKey = 0;
+  for (const key in someObject) {
+    // console.log(someObject[key]);
     if (inputValue === someObject[key]) {
+      inputKey = key;
+      // console.log(key);
+      return key;
     }
-  }
-  return key;
+  } return undefined;
 }
 // return the key of the input value
 
-
-console.log(findKeybyValue(someObject, "Yukon Gold"));
+// console.log(someObject);
+// console.log(findKeybyValue(somePotato, "Yukon Black"));
 //OUTPUT: that value's key (or an error message?)
 
 
@@ -51,11 +55,11 @@ console.log(findKeybyValue(someObject, "Yukon Gold"));
 
 //TEST
 
-// const bestTVShowsByGenre = {
-//   sci_fi: "The Expanse",
-//   comedy: "Brooklyn Nine-Nine",
-//   drama: "The Wire"
-// };
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama: "The Wire"
+};
 
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
+console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
