@@ -11,10 +11,10 @@ const assertEqual = function (actual, expected) {
 
 };
 
-const somePotato = {
-  name: "🥔",
-  type: "Yukon Gold",
-};
+// const somePotato = {
+//   name: "🥔",
+//   type: "Yukon Gold",
+// };
 
 //FUNCTION
 //INPUT: a value (string) for which we want to find the associated key
