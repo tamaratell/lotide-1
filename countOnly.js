@@ -16,21 +16,21 @@ const assertEqual = function (actual, expected) {
 //INPUT: itemsToCount and allItems
 //OUTPUT: an object that represents the counts of the strings found in allItems
 const countOnly = function (allItems, itemsToCount) {
-  const results = {};
-  for (const item of allItems) {
-    console.log(item);
-    if (!itemsToCount[item]) {
-      continue;
+  const results = {}; //declare an empty object to hold results 
+  for (const item of allItems) { //using a for of loop to loop over every index in the input Array
+    console.log(item); //testing to make sure loop works
+    if (!itemsToCount[item]) { // filter if statement - if the index is not in itemsToCount...
+      continue; //skip this loop
     }
     // inside the loop, 
     // increment the counter for each item:
     //   set a property with that string key to:
     //     the value that was already there (or zero if nothing there) with 1 added to it
-    if (!results[item]) {
+    if (!results[item]) { //if item is not in results, do not count
       results[item] = 0;
     }
 
-    results[item]++;
+    results[item]++; //count for each item that we are including ++
   }
   return results;
 }
