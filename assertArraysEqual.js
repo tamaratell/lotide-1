@@ -1,4 +1,4 @@
-const eqArrays = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   //loop over array 1 
   console.log(array1, array2);
   for (let i = 0; i < array1.length; i++) {
@@ -9,7 +9,6 @@ const eqArrays = function (array1, array2) {
     //   return true
     // else return false
   } return `✅Assertion Passed: ${array1} === ${array2}`;
-}
+};
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 4]));
-
+module.exports = assertArraysEqual;
