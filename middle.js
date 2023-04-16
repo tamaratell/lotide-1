@@ -20,12 +20,12 @@ const getMiddle = function(myArray) {
     } else if (myArray.length % 2 !== 0) {
       if (Number(index) === middle) {
         // console.log("the middle is index " + middle);
-        return "the middle value is " + myArray[index];
+        return myArray[index];
       }
       //for arrays with even number of indexes return two middle indexes
     } else if (myArray.length % 2 === 0) {
       if (Number(index) === middle) {
-        return "the middle values are " + myArray[index] + " and " + myArray[Number(index) + 1];
+        return [myArray[index], myArray[Number(index) + 1]];
       }
     }
 
